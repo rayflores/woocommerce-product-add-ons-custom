@@ -1,0 +1,66 @@
+.addon-has-image{
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.addon-has-image input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  visibility: hidden;
+}
+
+.addon-has-image input ~ label{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 1.4;
+  min-height: 82px;
+  font-size: 2em;
+}
+
+.addon-has-image input[type='checkbox'] ~ label:before{
+  content: '';
+  top: 2px;
+  left: 0;
+  display: inline-block;
+  margin-right: 15px;
+  height: 82px;
+  width: 207px;
+  box-sizing: border-box;
+  border: 7px solid #fff;
+  border-radius: 3px;
+  vertical-align: middle;
+  transition: .25s ease-in-out;
+}
+
+.addon-has-image input[type='checkbox'] ~ label:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+  transition: all .25s ease-in-out;
+}
+
+.addon-has-image input[type='checkbox']:checked ~ label:after{
+  width: 170px;
+  height: 55px;
+  background: rgba( 0,0,0,.5); 
+}
+
+
+/* Colors */
+
+.addon-has-image input[type='checkbox']:checked ~ label:before{
+  border: 7px solid rgba(0,0,0,.5);
+}
+.addon-has-image input[type='checkbox']:checked ~ label:after{
+  background-color: rgba(0,0,0,.5);
+}
